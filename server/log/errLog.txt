@@ -46,3 +46,72 @@
 20251107	15:04:20	b36dfb81-470e-4917-bf42-b1d97162e44e	ReferenceError: username is not defined
 20251109	18:19:21	b129c4f1-92c1-481a-a063-1117e68479e7	SyntaxError: Unexpected token 'e', "eyJhbGciOi"... is not valid JSON
 20251109	18:20:48	b0325d6d-3bc9-4590-8913-15547c64938f	SyntaxError: Expected ',' or '}' after property value in JSON at position 8
+20251111	20:57:18	9ae6cf97-b52d-4ba8-8572-7482cad43b37	Error: prevented by CORS
+20251111	20:57:18	e98f6e9d-24c1-410a-8c81-c595c64209f8	Error: prevented by CORS
+20251111	20:57:18	5e06d6fb-246b-45a7-8546-f63cffe01f2e	Error: prevented by CORS
+20251111	20:57:37	8947e650-7034-4545-b181-b9fbd75c2c9d	Error: prevented by CORS
+20251111	20:57:37	95731028-1d54-4cfa-bd0e-a6e9665190da	Error: prevented by CORS
+20251111	20:57:37	845352ba-ab24-412a-b773-a87a9a5866e7	Error: prevented by CORS
+20251111	20:58:04	55477ad0-1d00-442b-a06f-6ebc81eecaba	Error: prevented by CORS
+20251111	20:58:04	3b85c8ff-d670-4940-a606-29186fd844ea	Error: prevented by CORS
+20251111	20:58:04	691d3596-6d2e-4c5f-81d5-9fe95c60b1e3	Error: prevented by CORS
+20251111	20:58:11	bac1f493-1328-420d-a56e-04be841316fe	Error: prevented by CORS
+20251111	20:58:11	88350824-5903-4a89-9e32-178b81c12611	Error: prevented by CORS
+20251111	20:58:11	a984f2b1-c813-48cd-bc32-6d1d7540d5f3	Error: prevented by CORS
+20251111	20:58:22	cb53f88f-f965-47f8-b1db-087ada64841c	Error: prevented by CORS
+20251111	20:58:22	129cb433-c591-4074-aa24-35cb9f9069a3	Error: prevented by CORS
+20251111	20:58:22	7e458db1-ab17-4674-9873-7ce2867243af	Error: prevented by CORS
+20251111	20:58:43	70a96cd3-79f5-4b51-b72a-459b9be235af	Error: prevented by CORS
+20251111	20:58:43	75a52aad-9324-4546-9bc0-96b4463b152b	Error: prevented by CORS
+20251111	20:58:43	f178a1fa-287e-4740-b66e-3a4c1a00b2db	Error: prevented by CORS
+20251111	20:59:12	1d0f3223-7751-4447-8599-5e6847710e38	TypeError: res.headers is not a function
+20251111	21:00:44	66244405-48ce-4b3a-a598-442a3484cb5f	Error: prevented by CORS
+20251111	21:01:08	09c03108-18d7-4a22-896e-f42d525b8b2b	Error: prevented by CORS
+20251111	21:01:08	4c89b55b-9076-4668-b668-ed8c0f35c998	Error: prevented by CORS
+20251111	21:01:08	b521dc04-734b-4122-af92-6510ac7fc02f	Error: prevented by CORS
+20251111	21:01:31	22a0e637-cbae-4e3c-a1a3-e49629c80729	Error: prevented by CORS
+20251111	21:01:31	abcdcaac-9a9f-4756-881c-f05b989afe22	Error: prevented by CORS
+20251111	21:01:31	f530a824-6668-4d29-b09c-beda4439f8f5	Error: prevented by CORS
+20251111	21:03:11	09701839-cb1b-4151-b32a-9fa8d5531665	Error: prevented by CORS
+20251111	21:03:55	74763175-60a3-4021-9dca-f1f07a0d8013	Error: prevented by CORS
+20251111	21:04:47	fd6f0d71-cc1b-4fe2-bda8-10e3e86172b5	Error: prevented by CORS
+20251111	21:05:02	af6f62b3-41bc-4e56-a029-533791c20056	Error: prevented by CORS
+20251111	21:05:10	fd07286d-e3f4-4c7e-992f-91aeb7231ab9	Error: prevented by CORS
+20251111	21:05:14	7de17f25-3830-4868-a8a8-ea2d660c2bcc	Error: prevented by CORS
+20251111	21:05:16	64a28b18-76d4-4b9e-8077-55ecd46d665b	Error: prevented by CORS
+20251111	21:16:23	ddfefd15-7006-4722-a43d-d06092dc1077	Error: prevented by CORS
+20251111	21:17:03	98b56dca-c9df-42d5-928b-e69c28c3d84b	Error: prevented by CORS
+20251111	21:18:23	8484bfd8-ad69-4e40-ba75-76521ca2c79c	Error: prevented by CORS
+20251111	21:57:49	4823bef1-8531-4d51-a48b-e4387c15335b	Error: prevented by CORS
+20251111	21:58:00	b8b073ab-3968-4bf7-821e-3f093021579e	Error: prevented by CORS
+20251111	21:58:44	bfb464ef-d284-41b3-b0ef-3814819e9850	Error: prevented by CORS
+20251111	21:59:05	4d244aa0-2f05-49cb-a54e-671bee5e48c0	Error: prevented by CORS
+20251111	21:59:32	c6e7f91f-0752-4bd0-bc32-ae67f5be5301	Error: prevented by CORS
+20251111	22:00:27	8c21a223-c0bb-4043-ae74-573cd56ad3fb	Error: prevented by CORS
+20251111	22:05:19	0d1a46b0-6739-476e-8550-8dd330485ff6	Error: prevented by CORS
+20251111	22:05:46	a1ef47f7-a692-4ef5-a84d-6e6d3bdfa36b	Error: prevented by CORS
+20251111	22:05:55	ece6c2ea-044d-4e5d-98b8-904cff38d3a2	Error: prevented by CORS
+20251111	22:06:07	2ee07c78-3ec4-4931-a01d-dc1ec10de885	Error: prevented by CORS
+20251111	22:08:18	6765877f-25e8-4cb6-876f-054d63e1403c	Error: prevented by CORS
+20251111	22:10:26	ec4e0152-9aaf-43db-98e1-ee2bf439a62e	Error: prevented by CORS
+20251111	22:10:55	71955b66-140f-451b-88bc-d7c8d4d97431	Error: prevented by CORS
+20251111	22:11:22	325825be-9314-4ab9-b243-eac9662fa09f	Error: prevented by CORS
+20251111	22:12:21	5fd2efad-58d1-4d41-b49f-a5bb4885e130	Error: prevented by CORS
+20251111	22:12:42	fa08451b-bf99-4b41-b9a8-18d36139be86	Error: prevented by CORS
+20251111	22:12:58	2e5fa316-e5bd-4e4e-a62f-4f593a026fd5	Error: prevented by CORS
+20251111	22:13:16	a7771688-b344-4934-b1e0-961821b990fc	Error: prevented by CORS
+20251111	22:13:26	d13b9185-e895-4c79-809d-5cfecf69df06	Error: prevented by CORS
+20251111	22:13:52	fd02a3c8-b81c-4f97-aa15-070505078eed	Error: prevented by CORS
+20251111	22:24:17	c3484ae8-273f-46ef-bfb1-e55b0750f8cd	Error: prevented by CORS
+20251111	22:25:30	a8732bfa-ff54-43dc-881d-2a4398160581	Error: prevented by CORS
+20251111	22:25:30	8e2d9f90-38a3-490f-b8c5-cdc06672ddbe	Error: prevented by CORS
+20251111	22:25:30	ac2ff41a-9c12-4f63-bd08-caabf57edb1a	Error: prevented by CORS
+20251111	22:25:54	95d9eebd-09a8-4457-813c-1cfe5b13452e	Error: prevented by CORS
+20251111	22:25:56	7c7fd3f0-8775-45fb-b31b-39189451bbe9	Error: prevented by CORS
+20251111	22:26:14	d1bffbae-4b33-4560-88bc-3fbcd44599eb	Error: prevented by CORS
+20251111	22:27:13	74f59bd6-03f7-46ed-846e-eaece593208e	Error: prevented by CORS
+20251111	22:27:44	1592be09-8ee0-470c-b4c4-00ae69657a37	Error: prevented by CORS
+20251111	22:28:00	9c387831-90ec-4347-a4c9-a22d23479823	Error: prevented by CORS
+20251111	22:51:23	765acf58-5e1f-49a2-8cf2-323b9153318d	TypeError: res.headers is not a function
+20251111	22:54:35	e7c45371-c110-42c7-b859-f5e5446bcdc4	TypeError: res.headers is not a function
+20251111	22:55:16	cb9089fd-5305-4219-a97b-a5bd098579fd	TypeError: res.headers is not a function

@@ -12,3 +12,8 @@
 <p>Các dạng file cơ bản gồm: <br><b>main.scss</b>: file cha để import các file con của nó và file con nó có dấu gạch trước tên nó<br><b>_colors.scss</b>: gồm định dạng các biến màu cơ bản khi làm web và có thể bô sung thêm<br><b>_mixins.scss</b>: gồm các định dạng function để style<br>Đấy là các file định dạng, sau này viết file sass có tên _component.scss viết css như thường. </p>
 <p>Sau khi viết xong sass thì bấm vào Watch Sass nằm phía dưới thanh terminal lúc này nó sẽ tự sinh ra file css và đảm bảo rằng file index.js liên kết vs file css này.</p>
 <p>Nếu file css tự sinh nằm ở sai chỗ thì bấm vào File trên thanh bar-->Preferences-->Settings-->search Sass trêm tìm kiếm-->Bấm vào extension của nó-->Bấm edit setting.json-->kiếm và dán thay thế lệnh này vào  "savePath": "/client/src/css"</p>
+
+<h3>Cách chạy server</h3>
+<p>Client: npm start</p>
+<p>Server: npm run dev</p>
+<p>Lưu y: chạy 2 terminal 2 server mỗi cd tới thư mục nó</p>

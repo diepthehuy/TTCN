@@ -5,10 +5,10 @@ const app= express();
 const {logger} = require('./middleware/logEvent');
 const errorHanlder = require('./middleware/errorHandler');
 const cors = require('cors');
-const {corsOpt} = require('./config/CorsOption');
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
+const {corsOpt} = require('./config/CorsOption');
 const mongoose = require('mongoose');
 const dbConnect = require('./config/dbConnect');
 
