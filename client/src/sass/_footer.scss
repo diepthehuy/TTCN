@@ -1,4 +1,11 @@
 footer{
     background-color: $section-bg;
+    padding: 1.5rem;
+    @include flexCenter;
+}
+
+@include mq(789px){
+    footer{
     padding: 2rem;
+    }
 }
