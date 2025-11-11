@@ -1,10 +1,10 @@
 import { useState,useEffect } from "react";
 import Layout from "./components/Layout";
 function App() {
-      //test 2 api của bên backend. 1 cái là đường dãn '/auth'là đăng nhập và '/register' là đăng ký
-      const user ={"username": "walt12","password": "Aa$12345"};//user này đã có trong mongoDB
+      //test 2 route của bên backend. 1 cái là đường dãn '/auth'là đăng nhập và '/register' là đăng ký
+      const user ={"username": "walt12","password": "Aa$12345"};//user này đã có trong mongoDB dùng để đn
       const user1 = {"username": "walt13","password": "Aa$12345"}//chưa có hoặc đã có rồi do test xong chưa xóa user bên MongoDB
-      //test nhẹ api đăng nhập
+      //test nhẹ route đăng nhập
       const login =async () =>{
         try{
           const reponse = await fetch("http://localhost:3500/auth",{
@@ -19,7 +19,7 @@ function App() {
           console.log(err.message);//Báo lỗi
         }
       }
-      //test nhẹ hàm đăng ký
+      //test nhẹ route đăng ký
       const signup =async () =>{
         try{
           const reponse = await fetch("http://localhost:3500/register",{
