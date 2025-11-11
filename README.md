@@ -17,4 +17,4 @@
 <p>Client: npm start</p>
 <p>Server: npm run dev</p>
 <p>Lưu y: chạy 2 terminal 2 server mỗi terminal cd tới thư mục nó</p>
-<p>Cần cẩn thận thi submit và push lên git vì t có thể push lên rồi và bản pull về của bro bị chậm 1 submit nên không thể push lên được --> Trước mỗi cần code check xem có cập nhất mới gì không nếu có thì pull code đó về rồi hả code</p>
+<p>Cần cẩn thận khi submit và push lên git vì t có thể push code lên rồi và bản đã pull về từ trước của bro bị chậm 1 submit nên không thể push lên được(phải cùng vs bản submit mới nhất) --> Trước mỗi cần code check xem có cập nhất mới gì không nếu có thì pull code đó về rồi hả code</p>
