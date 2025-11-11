@@ -16,4 +16,5 @@
 <h3>Cách chạy server</h3>
 <p>Client: npm start</p>
 <p>Server: npm run dev</p>
-<p>Lưu y: chạy 2 terminal 2 server mỗi cd tới thư mục nó</p>
+<p>Lưu y: chạy 2 terminal 2 server mỗi terminal cd tới thư mục nó</p>
+<p>Cần cẩn thận thi submit và push lên git vì t có thể push lên rồi và bản pull về của bro bị chậm 1 submit nên không thể push lên được --> Trước mỗi cần code check xem có cập nhất mới gì không nếu có thì pull code đó về rồi hả code</p>
