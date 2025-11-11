@@ -13,13 +13,13 @@ const mongoose = require('mongoose');
 const dbConnect = require('./config/dbConnect');
 
 const PORT = process.env.PORT || 3500;
-
+//connect database MongoDB, tạo tk rồi báo t add vào database
 dbConnect();
-
+//hàm app.use() sẽ được thực thi vs mọi method http và nếu biến đường dẫn '/' nằm ở đầu hay không thì logger này vẫn sẽ chạy
 app.use(logger);
 
 app.use(credentials);
-app.use(cors(corsOpt));
+app.use(cors(corsOpt));//CORS
 
 app.use(express.urlencoded({extended:false}));
 

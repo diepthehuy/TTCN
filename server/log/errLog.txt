@@ -115,3 +115,6 @@
 20251111	22:51:23	765acf58-5e1f-49a2-8cf2-323b9153318d	TypeError: res.headers is not a function
 20251111	22:54:35	e7c45371-c110-42c7-b859-f5e5446bcdc4	TypeError: res.headers is not a function
 20251111	22:55:16	cb9089fd-5305-4219-a97b-a5bd098579fd	TypeError: res.headers is not a function
+20251111	23:09:21	3197d7ae-fb5d-45af-aae2-5b0f8e5d3ff0	TypeError: res.headers is not a function
+20251111	23:18:42	1052c1a3-ba95-4a38-833f-d6efdf65001d	TypeError: Cannot read properties of undefined (reading 'id')
+20251111	23:19:02	959a467b-df98-4644-a82f-56ef6757ef9f	CastError: Cast to ObjectId failed for value "2" (type string) at path "_id" for model "Employee"
