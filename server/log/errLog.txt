@@ -1,0 +1,48 @@
+20251029	23:56:36	19afb130-6a5d-41d5-8646-3cec88a00b34	TypeError	fspromise.readFil is not a function
+20251101	23:26:45	a8d6e7a9-80b6-41d0-bf16-459be897975e	Error: prevented by CORS
+20251101	23:33:49	ffc048a1-a137-4fb8-ae12-07cbbf1affb0	Error: prevented by CORS
+20251101	23:34:01	12e8e774-ebd3-4106-9ad1-9555125be599	TypeError: res.status is not a function
+20251101	23:34:05	4674bafc-f06e-4ccc-b1e3-451b762ac160	TypeError: res.status is not a function
+20251101	23:34:10	f828fae4-695d-487f-9636-5a9abbc047d9	TypeError: res.status is not a function
+20251101	23:34:10	afb38bce-8971-432f-89ab-2f7b489373b1	TypeError: res.status is not a function
+20251101	23:36:05	6b2bd565-5e77-4907-a567-17f63c1f67eb	TypeError: res.status is not a function
+20251101	23:36:05	ecfe2a3c-9f19-416c-9cfc-cd14db79c955	TypeError: res.status is not a function
+20251101	23:37:46	ae1fe225-d1e1-4694-bc52-0336b7780b17	TypeError: res.status is not a function
+20251104	22:37:11	07ac2dcb-0a8d-4653-812a-c643335f669d	Error: ENOENT: no such file or directory, stat 'C:\Users\diepb\OneDrive\Documents\Projects\React\nodejstest\routes\new-page.html'
+20251104	23:16:54	1a804cc9-a8dd-4061-83fc-b67b3544886a	TypeError: Cannot read properties of undefined (reading 'lastname')
+20251104	23:17:02	ed66cb33-3d22-4900-9e92-ba719241194c	TypeError: Cannot read properties of undefined (reading 'lastname')
+20251104	23:17:49	b68a0a1e-5575-42ca-9170-729cee449eb2	TypeError: Cannot read properties of undefined (reading 'lastname')
+20251104	23:17:52	04d6f37a-7a19-41f6-9e0e-86e559ac520a	TypeError: Cannot read properties of undefined (reading 'lastname')
+20251104	23:17:57	8e609caa-5b2b-4a3e-9202-11c3ff952cf0	TypeError: Cannot read properties of undefined (reading 'lastname')
+20251104	23:18:01	50beab29-129b-44c4-ae88-1bb95ca3384b	TypeError: Cannot read properties of undefined (reading 'lastname')
+20251104	23:19:00	ed4ec962-4fc1-4484-a606-21c8d997cc3f	TypeError: Cannot read properties of undefined (reading 'firstname')
+20251104	23:19:02	1cb5b120-53f1-4b89-9862-42f642a7643e	TypeError: Cannot read properties of undefined (reading 'firstname')
+20251105	00:47:44	51c17a32-39bd-4bf1-8028-1b0fb18d9eed	ReferenceError: parseString is not defined
+20251105	00:52:41	ddbed283-65d7-406a-812c-de54ec765692	TypeError: Cannot read properties of undefined (reading 'id')
+20251105	00:54:48	3761efd0-5c6d-4278-9e3c-534dc0e0f4f3	TypeError: Cannot read properties of undefined (reading 'id')
+20251105	00:54:55	d7be1d74-692a-4b68-a7d1-d7fbb466e24f	TypeError: Cannot read properties of undefined (reading 'id')
+20251105	00:55:43	70bc3cda-caab-408d-8a5d-1bb43756f24c	TypeError: Cannot read properties of undefined (reading 'id')
+20251105	00:56:15	153ac63d-3077-4454-9fdd-1373eface950	TypeError: Cannot read properties of undefined (reading 'ide')
+20251105	10:14:25	e487baa1-6b88-4b6c-b423-fd2dea328b15	TypeError: data.setEmployee is not a function
+20251105	10:26:24	2825e7af-ce20-4d1b-ae82-d2b1db91d10f	TypeError: Cannot read properties of undefined (reading 'find')
+20251105	10:26:27	1b24010e-a21c-486e-b1ea-b9d5288288cc	TypeError: Cannot read properties of undefined (reading 'find')
+20251105	10:26:30	62304a5e-c510-4307-9a23-23609a2ab450	TypeError: Cannot read properties of undefined (reading 'find')
+20251105	16:56:14	2a5270e6-aef7-4e02-bcef-5296ee6f90a3	Error: prevented by CORS
+20251106	20:43:46	1289fb14-40e3-4eb7-b81e-1c629c2f28b1	Error: prevented by CORS
+20251106	20:43:49	348b7689-f4e1-408d-a1b4-aba26c824cb7	Error: prevented by CORS
+20251107	12:09:52	1231a1af-bf11-412a-98cc-37df4b1b1711	Error: secretOrPrivateKey must have a value
+20251107	12:10:15	fa0caf92-f17c-4a78-97d0-712ff928d7ef	Error: secretOrPrivateKey must have a value
+20251107	12:12:58	55d8a416-489f-4618-a985-0b33f93d56cc	Error: secretOrPrivateKey must have a value
+20251107	12:14:27	8fa1c010-76db-4a2f-b491-7969ac459b86	Error: secretOrPrivateKey must have a value
+20251107	12:15:37	85425537-b17c-4c06-b811-35b9c7add5c1	TypeError: otherUser is not iterable
+20251107	12:16:00	d5afb43a-14fa-4fca-b14c-df0fcbe94af5	TypeError: otherUser is not iterable
+20251107	12:19:01	e138d801-db90-4351-9ed7-6e60ac3e81df	TypeError: Cannot read properties of undefined (reading 'firstname')
+20251107	12:19:10	d5f656c8-2d01-419f-bbb3-92c9f2fd4d74	TypeError: Cannot read properties of undefined (reading 'firstname')
+20251107	12:51:05	5e1f66ba-c90c-4719-8963-00b082a16e5f	SyntaxError: Expected double-quoted property name in JSON at position 47
+20251107	12:52:17	93fcce1a-156f-4f83-b87d-199b0c9869ad	TypeError: Cannot destructure property 'username' of 'req.body' as it is undefined.
+20251107	13:00:29	2aa4e707-6382-4414-92bb-7c9689c7af62	TypeError: Cannot read properties of undefined (reading 'firstname')
+20251107	13:00:36	2fa90d42-4298-45fb-85fe-cb713c7993e8	TypeError: Cannot read properties of undefined (reading 'id')
+20251107	13:03:09	a7008fd0-3826-44ab-adcf-10c2c1da4ea0	SyntaxError: Expected ',' or '}' after property value in JSON at position 40
+20251107	15:04:20	b36dfb81-470e-4917-bf42-b1d97162e44e	ReferenceError: username is not defined
+20251109	18:19:21	b129c4f1-92c1-481a-a063-1117e68479e7	SyntaxError: Unexpected token 'e', "eyJhbGciOi"... is not valid JSON
+20251109	18:20:48	b0325d6d-3bc9-4590-8913-15547c64938f	SyntaxError: Expected ',' or '}' after property value in JSON at position 8
