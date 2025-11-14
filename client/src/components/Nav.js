@@ -1,23 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {FaUser, FaShoppingCart,FaSearch} from 'react-icons/fa'
+import { FaCaretDown, FaList } from 'react-icons/fa'
 const Nav = () => {
   return (
     <nav>
-      <div><h1><Link>Shop</Link></h1></div>
-      <div className='search'>
-        <input type="text" placeholder='Tìm kiếm sản phẩm'/>
-        <Link><FaSearch/></Link>
-      </div>
-      <div>
-        <Link ><FaUser/></Link>
-        <Link >Đăng nhập /</Link>
-        <Link >Đăng ký</Link>
-      </div>
-      <Link >
-        <FaShoppingCart/>
-         <div>Giỏ hàng</div>
-      </Link>
+      <button><FaList/> Danh Sách Sản Phẩm</button>
+      <button>Chọn khu vực xem ưu đãi <FaCaretDown/></button>
     </nav>
   )
 }

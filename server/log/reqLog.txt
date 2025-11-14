@@ -866,3 +866,17 @@
 20251114	11:43:06	e25b47e2-3863-4529-970c-780ed169a9ac	GET	undefined	/favicon.ico
 20251114	11:43:19	c2db8d84-ce55-456f-833b-ada0e892a40c	OPTIONS	http://localhost:3000	/register
 20251114	11:43:19	3efabc27-e26f-4e99-8950-95e865067171	POST	http://localhost:3000	/register
+20251114	23:24:05	9d4dc5cd-d4d2-4bb6-8d5b-7f052fb0948a	OPTIONS	http://localhost:3000	/auth
+20251114	23:24:05	eab60ea4-e97a-4541-bc76-709ca71a9ba1	POST	http://localhost:3000	/auth
+20251114	23:24:45	0948333b-2df0-4398-841b-2c92e7607844	OPTIONS	http://localhost:3000	/auth
+20251114	23:24:45	acddef80-997e-4837-811d-71705f1f8949	POST	http://localhost:3000	/auth
+20251114	23:24:52	66b3b08a-e11f-4aed-9dc3-eb0a9f74e386	OPTIONS	http://localhost:3000	/auth
+20251114	23:24:52	07097246-774c-41ed-a688-d6e6c4ed4fac	POST	http://localhost:3000	/auth
+20251114	23:24:53	d882352e-9e65-44cd-8b5c-0303ec7cd56b	OPTIONS	http://localhost:3000	/auth
+20251114	23:24:53	107f2c7e-bff0-4141-9716-ce4f5ea46a68	POST	http://localhost:3000	/auth
+20251114	23:25:02	ad1cb69e-b08a-4937-9db8-e42100247da2	OPTIONS	http://localhost:3000	/auth
+20251114	23:25:02	539a4c13-ccb5-4226-bb40-fd194ded2e20	POST	http://localhost:3000	/auth
+20251114	23:25:03	337aeffc-5b3b-4254-a471-1e37f3ba532a	OPTIONS	http://localhost:3000	/auth
+20251114	23:25:03	86a9b3ae-8c37-427b-86da-9b012ebd2c97	POST	http://localhost:3000	/auth
+20251114	23:25:04	4390984a-7a72-4445-849e-ad180eec61f6	OPTIONS	http://localhost:3000	/auth
+20251114	23:25:04	2c373f6a-c3a8-4807-bb37-77c4aceb46c5	POST	http://localhost:3000	/auth

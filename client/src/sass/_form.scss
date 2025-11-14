@@ -1,0 +1,69 @@
+.form{
+    margin: 2rem 5rem 2rem 5rem;
+    padding: 2rem 5rem 2rem 5rem;
+    border-radius: 10px 10px 10px 10px;
+    background-color: $section-bg;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form >div>div{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+.form >div>div>a{
+    text-decoration: none;
+    color: $font-color;
+}
+
+.form p{
+    width: 500px;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form form>input{
+    background-color: $section-bg;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 0px 10px 0px;
+    border: 1px solid $border-color1;
+    width: 500px;
+    padding: 0.6rem;
+    font-size: 1rem;
+}
+
+.form form>input:hover{
+    border: 1px solid $main-color;
+}
+
+.form form>input:focus{
+    outline: 1px $main-color solid;
+}
+
+.form form>button{
+    margin: 10px 0px 10px 0px;
+    padding: 12px;
+    width: 500px;
+    border: none;
+    border-radius: 5px;
+    background-color: $main-color;
+    color: $body-bg;
+    font-size: 1rem;
+}
+
+.form >div>form>a:visited{
+    color: $main-color;
+}
+
+.form >div>form>a:hover{
+    text-decoration: underline;
+}
+
+.form svg{
+    padding-top: 4px;
+}

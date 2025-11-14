@@ -1,9 +1,23 @@
 import React from 'react'
-import Nav from './Nav'
+import { Link } from 'react-router-dom'
+import {FaSearch,FaUser,FaShoppingCart} from 'react-icons/fa'
 const Header = () => {
   return (
-    <header>
-      <Nav />  
+     <header>
+        <div><h1><Link to="/">Shop</Link></h1></div>
+      <div className='search'>
+        <input type="text" placeholder='Tìm kiếm sản phẩm'/>
+        <Link><FaSearch/></Link>
+      </div>
+      <div>
+        <Link to="login"><FaUser/></Link>
+        <Link to="login">Đăng nhập /</Link>
+        <Link to="register">Đăng ký</Link>
+      </div>
+      <Link >
+        <FaShoppingCart/>
+         <div>Giỏ hàng</div>
+      </Link>
     </header>
   )
 }

@@ -4,13 +4,12 @@ header{
     color: aliceblue;
 }
 
-nav{
+header{
     display: flex;
     justify-content: space-around;
 }
 
-nav a{
-    text-decoration: none;
+header a{
     @include flexCenter;
     color: $section-bg;
 }
@@ -43,20 +42,20 @@ nav a{
     background-color: $light-main-color;
 }
 
-nav >div{
+header >div{
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
 }
 
 
-nav >div>a:first-child{
+header >div>a:first-child{
     width: 39px;
     border: 1px solid $section-bg;
     border-radius: 50%;
 }
 
-nav >a{
+header >a{
     background-color: transparent;
     padding: 0.5rem;
     border: 1px solid $section-bg;

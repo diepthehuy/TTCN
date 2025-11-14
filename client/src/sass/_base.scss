@@ -13,3 +13,11 @@ html {
 body{
   background-color: $body-bg;
 }
+
+button:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}

@@ -1,0 +1,15 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: $section-bg;
+    padding: 1rem 5rem 1rem 5rem;
+}
+
+nav >button{
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    display: flex;
+    gap: 5px;
+}
+
