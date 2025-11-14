@@ -4,12 +4,6 @@ header{
     color: aliceblue;
 }
 
-@include mq(789px){
-    header{
-    padding: 2rem;
-    }
-}
-
 nav{
     display: flex;
     justify-content: space-around;
@@ -21,7 +15,11 @@ nav a{
     color: $section-bg;
 }
 
-nav > input{
+.search{
+    gap: 0px;
+}
+
+.search input{
     background-color: $section-bg;
     border-radius: 8px 0px 0px 8px;
     border: 1px solid $main-color;
@@ -30,9 +28,19 @@ nav > input{
     font-size: 1rem;
 }
 
-nav > input:focus, nav > input:hover{
+.search >a{
+    background-color: $dark-main-color;
+    width: 2.5rem;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.search > input:focus, .search > input:hover{
     border: 1px solid $border-color1;
     outline: none;
+}
+
+.search > a:focus, .search > a:hover{
+    background-color: $light-main-color;
 }
 
 nav >div{
@@ -55,4 +63,11 @@ nav >a{
     border-radius: 5px;
     color: $section-bg;
     gap: 0.5rem;
+}
+
+
+@include mq(789px){
+    header{
+    padding: 2rem;
+    }
 }
