@@ -18,6 +18,7 @@ nav{
 nav a{
     text-decoration: none;
     @include flexCenter;
+    color: $section-bg;
 }
 
 nav > input{
@@ -40,9 +41,6 @@ nav >div{
     gap: 0.5rem;
 }
 
-nav >div >a{
-    color: $section-bg;
-}
 
 nav >div>a:first-child{
     width: 39px;

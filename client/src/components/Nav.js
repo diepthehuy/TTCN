@@ -4,14 +4,17 @@ import {FaUser, FaShoppingCart} from 'react-icons/fa'
 const Nav = () => {
   return (
     <nav>
-      <h1>Shop</h1>
+      <div><h1><Link>Shop</Link></h1></div>
       <input type="text" placeholder='Tìm kiếm sản phẩm'/>
       <div>
         <Link><FaUser/></Link>
         <Link >Đăng nhập /</Link>
         <Link >Đăng ký</Link>
       </div>
-      <Link ><FaShoppingCart/> Giỏ hàng</Link>
+      <Link >
+        <FaShoppingCart/>
+         <div>Giỏ hàng</div>
+      </Link>
     </nav>
   )
 }
