@@ -9,3 +9,52 @@ header{
     padding: 2rem;
     }
 }
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a{
+    text-decoration: none;
+    @include flexCenter;
+}
+
+nav > input{
+    background-color: $section-bg;
+    border-radius: 8px 0px 0px 8px;
+    border: 1px solid $main-color;
+    width: 300px;
+    padding: 0.6rem;
+    font-size: 1rem;
+}
+
+nav > input:focus, nav > input:hover{
+    border: 1px solid $border-color1;
+    outline: none;
+}
+
+nav >div{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+nav >div >a{
+    color: $section-bg;
+}
+
+nav >div>a:first-child{
+    width: 39px;
+    border: 1px solid $section-bg;
+    border-radius: 50%;
+}
+
+nav >a{
+    background-color: transparent;
+    padding: 0.5rem;
+    border: 1px solid $section-bg;
+    border-radius: 5px;
+    color: $section-bg;
+    gap: 0.5rem;
+}

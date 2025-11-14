@@ -861,3 +861,8 @@
 20251112	00:14:40	a8a5e7b2-98b1-48b3-acb2-9f77aa0e6a3d	POST	http://localhost:3000	/auth
 20251112	00:14:41	714a169c-90aa-48b5-a268-2fd6e8eb1030	OPTIONS	http://localhost:3000	/register
 20251112	00:14:41	fc5ad237-7191-433b-b269-81c87c2f209a	POST	http://localhost:3000	/register
+20251114	11:43:06	8edef668-17b9-413f-881d-9be16fe8c477	GET	undefined	/
+20251114	11:43:06	32b5261e-3364-40df-a281-36d9ce64b3be	GET	undefined	/subdir/css/style.css
+20251114	11:43:06	e25b47e2-3863-4529-970c-780ed169a9ac	GET	undefined	/favicon.ico
+20251114	11:43:19	c2db8d84-ce55-456f-833b-ada0e892a40c	OPTIONS	http://localhost:3000	/register
+20251114	11:43:19	3efabc27-e26f-4e99-8950-95e865067171	POST	http://localhost:3000	/register

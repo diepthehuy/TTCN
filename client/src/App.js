@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 function App() {
       //test 2 route của bên backend. 1 cái là đường dãn '/auth'là đăng nhập và '/register' là đăng ký
       const user ={"username": "walt12","password": "Aa$12345"};//user này đã có trong mongoDB dùng để đn
-      const user1 = {"username": "walt13","password": "Aa$12345"}//chưa có hoặc đã có rồi do test xong chưa xóa user bên MongoDB
+      const user1 = {"username": "walt133","password": "Aa$12345"}//chưa có hoặc đã có rồi do test xong chưa xóa user bên MongoDB
       //test nhẹ route đăng nhập
       const login =async () =>{
         try{
