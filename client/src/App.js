@@ -8,6 +8,11 @@ import Login from "./components/Login";
 import Password from "./components/Password";
 
 function App() {
+  const [user,setUser] = useState(null);
+  const [password,setPassword] = useState(null);
+  const [email,setEmail] = useState(null);
+  const [fullname,setFullname] = useState(null);
+  const [phone,setPhone] = useState(null);
 
   useEffect(()=>{
 
@@ -15,10 +20,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout/>}>
+      <Route path="/" element={<Layout user={user}/>}>
         <Route index element={<Home/>} />
-        <Route path="register" element={<Register/>}/>
-        <Route path="login" element={<Login/>}/>
+        <Route path="register" element={<Register user={user} setUser={setUser} password={password} setPassword={setPassword} email={email} setEmail={setEmail} fullname={fullname} setFullname={setFullname} phone={phone} setPhone={setPhone}/>}/>
+        <Route path="login" element={<Login user={user} email={email} password={password}/>}/>
         <Route path="password" element={<Password/>}/>
         <Route path="*" element={<Missing/>}/>
       </Route>

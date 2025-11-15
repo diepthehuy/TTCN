@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {FaSearch,FaUser,FaShoppingCart} from 'react-icons/fa'
-const Header = () => {
+const Header = ({user}) => {
   return (
      <header>
         <div><h1><Link to="/">Shop</Link></h1></div>
@@ -10,9 +10,12 @@ const Header = () => {
         <Link><FaSearch/></Link>
       </div>
       <div>
+        {user && <p><Link to="login"><FaUser/></Link> {user}</p>}
+        {!user && <>
         <Link to="login"><FaUser/></Link>
         <Link to="login">Đăng nhập /</Link>
-        <Link to="register">Đăng ký</Link>
+        <Link to="register">Đăng ký</Link></>
+        }
       </div>
       <Link >
         <FaShoppingCart/>

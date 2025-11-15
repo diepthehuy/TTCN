@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const dbConnect = async() =>{
     try{
-        await mongoose.connect(process.env.DATABASE_URI,{dbName: 'CompanyDB'});
+        await mongoose.connect(process.env.DATABASE_URI,{dbName: 'TTCN'});
     }catch (err){
         console.error(err);
     }
