@@ -4,8 +4,7 @@ const jwt = require('jsonwebtoken');
 
 const handlelogin = async (req,res) =>{
      const{ username, password } = req.body;
-     console.log(username + password);
-    if(!username&&!password)return res.status(400).json({"message":"UserName and Password are required"});
+    if(!username&&!password)return res.sendStatus(400);
     const foundUser = await User.findOne({username: username}).exec();
     if(!foundUser) return res.sendStatus(401);
     const match = bcrypt.compare(password,foundUser.password);
@@ -20,7 +19,7 @@ const handlelogin = async (req,res) =>{
                 }
             },
             process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn : '90s'}
+            { expiresIn : '900s'}
         );
         const refreshToken = jwt.sign(
             {"username":foundUser.username},
@@ -33,7 +32,7 @@ const handlelogin = async (req,res) =>{
         
         //end
         res.cookie('jwt', refreshToken, {httpOnly: true,sameSite : 'None',secure: true, maxAge: 24 * 60 * 60 * 1000});
-        res.json({accessToken});
+        res.json({accessToken,foundUser});
     }else{
         res.sendStatus(401);
     }
