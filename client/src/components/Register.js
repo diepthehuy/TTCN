@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 
+//hàm đk chưa tối ưu
 const Register = ({ user, setUser, password, setPassword, email, setEmail, fullname, setFullname, phone, setPhone }) => {
   const [comfirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(false);
