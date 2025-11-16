@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
 //Tạm hoàn thiện
-const Login = ({ setUser,setPassword,setFullname,setEmail,setPhone }) => {
+const Login = ({ setUser, setFullname, setEmail, setPhone }) => {
     const [loggedInUser, setLoggedInUser] = useState("");
     const [loggedInEmail, setLoggedInEmail] = useState("");
     const [loggedInPassword, setLoggedInPassword] = useState("");
@@ -11,14 +11,17 @@ const Login = ({ setUser,setPassword,setFullname,setEmail,setPhone }) => {
     const [errorMessage, setErrorMessage] = useState("");
     const navigate = useNavigate();
 
-
-    const login = async () => {
-        if(!loggedInUser || !loggedInPassword){
+    const validator = () => {
+        if (!loggedInUser || !loggedInPassword) {
             setError(true);
             setErrorMessage("Vui lòng điền đầy đủ thông tin");
-            return;
-        }
-        const userLogin = { "username": loggedInUser, "password": loggedInPassword }
+            return false;
+        } return true;
+    }
+
+    const login = async () => {
+        if (validator() === false) return;
+        const userLogin = { "username": loggedInUser.trim(), "password": loggedInPassword }
         try {
             const reponse = await fetch("http://localhost:3500/auth", {
                 method: 'POST',// gửi bàng POST, muốn biết xài method gửi gì thì xem bên route của server xem endpoint đó nhận gì
@@ -26,20 +29,26 @@ const Login = ({ setUser,setPassword,setFullname,setEmail,setPhone }) => {
                 credentials: 'include',//này vẫn chưa rõ mà chỉ là yêu cầu khi gửi http của bọn Chrome, bọn trình duyệt khác hình như ko yêu cầu
                 body: JSON.stringify(userLogin)//body là nội dung request http bên frontend gửi đến server backend trong đó nội dung là user
             });
+            const data = await reponse.json();
             if (reponse.status === 200) {
-                //Đăng nhập thành công
-                const data = await reponse.json();
                 setUser(data.foundUser.username);
+                setEmail(data.foundUser.email);
+                setFullname(data.foundUser.fullname);
+                setPhone(data.foundUser.phone);
                 setErrorMessage("");
                 setError(false);
+                localStorage.setItem("accessToken", data.accessToken);
+                localStorage.setItem("username", data.foundUser.username);
+                localStorage.setItem("fullname", data.foundUser.fullname);
+                localStorage.setItem("email", data.foundUser.email);
+                localStorage.setItem("phone", data.foundUser.phone);
                 navigate("/");
             } else if (reponse.status === 401) {
-                //Đăng nhập thất bại
                 setError(true);
-                setErrorMessage("Tên đăng nhập hoặc mật khẩu không đúng");
+                setErrorMessage(data.message);
             }
         } catch (err) {
-            console.log(err.message);//Báo lỗi
+            console.log(err.message);
         }
     }
     return (
@@ -54,20 +63,20 @@ const Login = ({ setUser,setPassword,setFullname,setEmail,setPhone }) => {
                 </div>
                 {error &&
                     <form onSubmit={(e) => { e.preventDefault() }}>
-                    <input type="text" placeholder='Email hoặc tên đăng nhập' value={loggedInUser} onChange={(e) => { setLoggedInUser(e.target.value)}} style={{borderColor:"red",outlineColor:"red"}}  />
-                    <input type="password" placeholder='Mật khẩu' value={loggedInPassword} onChange={(e) => { setLoggedInPassword(e.target.value) }} style={{borderColor:"red",outlineColor:"red"}} />
-                    <Link to="/password">Bạn quên mật khẩu?</Link>
-                    <button type='submit' onClick={login}>Đăng nhập</button>
-                </form>
+                        <input type="text" placeholder='Email hoặc tên đăng nhập' value={loggedInUser} onChange={(e) => { setLoggedInUser(e.target.value) }} style={{ borderColor: "red", outlineColor: "red" }} />
+                        <input type="password" placeholder='Mật khẩu' value={loggedInPassword} onChange={(e) => { setLoggedInPassword(e.target.value) }} style={{ borderColor: "red", outlineColor: "red" }} />
+                        <Link to="/password">Bạn quên mật khẩu?</Link>
+                        <button type='submit' onClick={login}>Đăng nhập</button>
+                    </form>
                 }
                 {!error &&
-                 <form onSubmit={(e) => { e.preventDefault() }}>
-                    <input type="text" placeholder='Email hoặc tên đăng nhập' value={loggedInUser} onChange={(e) => { setLoggedInUser(e.target.value) }} />
-                    <input type="password" placeholder='Mật khẩu' value={loggedInPassword} onChange={(e) => { setLoggedInPassword(e.target.value) }} />
-                    <Link to="/password">Bạn quên mật khẩu?</Link>
-                    <button type='submit' onClick={login}>Đăng nhập</button>
-                </form>}
-                <p style={{color:"red"}}>{errorMessage}</p>
+                    <form onSubmit={(e) => { e.preventDefault() }}>
+                        <input type="text" placeholder='Email hoặc tên đăng nhập' value={loggedInUser} onChange={(e) => { setLoggedInUser(e.target.value) }} />
+                        <input type="password" placeholder='Mật khẩu' value={loggedInPassword} onChange={(e) => { setLoggedInPassword(e.target.value) }} />
+                        <Link to="/password">Bạn quên mật khẩu?</Link>
+                        <button type='submit' onClick={login}>Đăng nhập</button>
+                    </form>}
+                <p style={{ color: "red" }}>{errorMessage}</p>
             </div>
             <img src="https://cdn.divineshop.vn/static/368e705d45bfc8742aa9d20dbcf4c78c.svg" alt="" />
         </section>

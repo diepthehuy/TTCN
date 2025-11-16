@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaAngleLeft } from 'react-icons/fa'
 
+//Chưa hoàn thiện
 const Password = () => {
     return (
         <section className='form'>

@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Layout from "./components/Layout";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
@@ -8,24 +8,30 @@ import Login from "./components/Login";
 import Password from "./components/Password";
 
 function App() {
-  const [user,setUser] = useState("");
-  const [password,setPassword] = useState("");
-  const [email,setEmail] = useState("");
-  const [fullname,setFullname] = useState("");
-  const [phone,setPhone] = useState("");
+  const [user, setUser] = useState("");
+  const [email, setEmail] = useState("");
+  const [fullname, setFullname] = useState("");
+  const [phone, setPhone] = useState("");
 
-  useEffect(()=>{
+  useEffect(() => {
+    const token = localStorage.getItem("accessToken");
 
-  },[]);
+    if (token) {
+      setUser(localStorage.getItem("username"));
+      setFullname(localStorage.getItem("fullname"));
+      setEmail(localStorage.getItem("email"));
+      setPhone(localStorage.getItem("phone"));
+    }
+  }, []);
 
   return (
     <Routes>
-      <Route path="/" element={<Layout user={user}/>}>
-        <Route index element={<Home/>} />
-        <Route path="register" element={<Register user={user} setUser={setUser} password={password} setPassword={setPassword} email={email} setEmail={setEmail} fullname={fullname} setFullname={setFullname} phone={phone} setPhone={setPhone}/>}/>
-        <Route path="login" element={<Login setUser={setUser} setFullname={setFullname} setPassword={setPassword} setPhone={setPhone} setEmail={setEmail} />}/>
-        <Route path="password" element={<Password/>}/>
-        <Route path="*" element={<Missing/>}/>
+      <Route path="/" element={<Layout user={user} />}>
+        <Route index element={<Home />} />
+        <Route path="register" element={<Register user={user} setUser={setUser} email={email} setEmail={setEmail} fullname={fullname} setFullname={setFullname} phone={phone} setPhone={setPhone} />} />
+        <Route path="login" element={<Login setUser={setUser} setFullname={setFullname} setPhone={setPhone} setEmail={setEmail} />} />
+        <Route path="password" element={<Password />} />
+        <Route path="*" element={<Missing />} />
       </Route>
     </Routes>
   );

@@ -4,9 +4,8 @@ const jwt = require('jsonwebtoken');
 
 const handlelogin = async (req,res) =>{
      const{ username, password } = req.body;
-    if(!username&&!password)return res.sendStatus(400);
     const foundUser = await User.findOne({username: username}).exec();
-    if(!foundUser) return res.sendStatus(401);
+    if(!foundUser) return res.status(401).json({message:"Tên đăng nhập hoặc mật khẩu không đúng"});
     const match = bcrypt.compare(password,foundUser.password);
     if(match){
         const roles = Object.values(foundUser.roles);
@@ -19,7 +18,7 @@ const handlelogin = async (req,res) =>{
                 }
             },
             process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn : '900s'}
+            { expiresIn : '1h'}
         );
         const refreshToken = jwt.sign(
             {"username":foundUser.username},
