@@ -32,11 +32,11 @@ const Header = ({ user }) => {
       </div>
       <div style={{ position: "relative" }}>
         {user && <div onMouseEnter={() => setDropdownOpen(!dropdownOpen)} onMouseLeave={() => setDropdownOpen(!dropdownOpen)}><Link><FaUser />{user}</Link>
-          {dropdownOpen && <div className='dropdown'>
+          {dropdownOpen && 
+          <div className='dropdown'>
             <Link style={{ color: "black" }}>Tài khoản</Link>
             <Link style={{ color: "black" }}>Lịch sử đơn hàng</Link>
             <Link style={{ color: "black" }}>Thông tin cá nhân</Link>
-            <hr />
             <Link style={{ color: "red" }} onClick={() => logout()}>Đăng xuất</Link>
           </div>
           }

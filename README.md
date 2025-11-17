@@ -28,12 +28,12 @@
     <li>Login✅ </li>
     <li>Register✅ </li>
     <li>Logout✅ </li>
-    <li>Footer❌</li>
+    <li>Footer❌(in progress by HuyNguyen)</li>
     <li>List❌</li>
     <li>Sliders❌</li>
     <li>Ads❌</li>
-    <li>Reset Password❌</li>
-    <li>Auto refreshToken❌</li>
+    <li>Reset Password❌(in progress by HuyDiep)</li>
+    <li>Auto refreshToken❌(in progress by HuyDiep)</li>
     <li>Permission❌</li>
     <li>Cart❌</li>
     <li>...</li>
