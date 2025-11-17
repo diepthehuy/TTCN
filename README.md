@@ -29,4 +29,12 @@
     <li>Register✅ </li>
     <li>Logout✅ </li>
     <li>Footer❌</li>
+    <li>List❌</li>
+    <li>Sliders❌</li>
+    <li>Ads❌</li>
+    <li>Reset Password❌</li>
+    <li>Auto refreshToken❌</li>
+    <li>Permission❌</li>
+    <li>Cart❌</li>
+    <li>...</li>
 </ul>
