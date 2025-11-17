@@ -1,9 +1,27 @@
-import React, { use, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FaSearch, FaUser, FaShoppingCart } from 'react-icons/fa'
 const Header = ({ user }) => {
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
 
+  const logout = async () => {
+    try {
+      const response = await fetch("http://localhost:3500/logout", {
+        method: 'GET',
+        credentials: 'include',
+      })
+      if (response.status === 204) {
+        localStorage.removeItem("accessToken");
+        localStorage.removeItem("username");
+        localStorage.removeItem("fullname");
+        localStorage.removeItem("email");
+        localStorage.removeItem("phone");
+        window.location.reload();
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
 
   return (
     <header>
@@ -13,12 +31,16 @@ const Header = ({ user }) => {
         <Link><FaSearch /></Link>
       </div>
       <div style={{ position: "relative" }}>
-        {user && <div onClick={()=>{setDropdownOpen(!dropdownOpen)}}><Link><FaUser />{user}</Link>
+        {user && <div onMouseEnter={() => setDropdownOpen(!dropdownOpen)} onMouseLeave={() => setDropdownOpen(!dropdownOpen)}><Link><FaUser />{user}</Link>
           {dropdownOpen && <div className='dropdown'>
-            <button style={{color:"red"}}>Đăng xuất</button>
+            <Link style={{ color: "black" }}>Tài khoản</Link>
+            <Link style={{ color: "black" }}>Lịch sử đơn hàng</Link>
+            <Link style={{ color: "black" }}>Thông tin cá nhân</Link>
+            <hr />
+            <Link style={{ color: "red" }} onClick={() => logout()}>Đăng xuất</Link>
           </div>
           }
-         </div>}
+        </div>}
         {!user && <>
           <Link to="login"><FaUser /></Link>
           <Link to="login">Đăng nhập /</Link>

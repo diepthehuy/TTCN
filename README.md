@@ -21,3 +21,11 @@
 <p>Tải package: <b>npm install</b> cho mỗi terminal</p>
 <p>Cần cẩn thận khi commit và push lên git vì t có thể push code lên rồi và bản đã pull về từ trước của bro bị chậm 1 hoặc vài commit nên không thể push lên được(phải cùng vs bản commit mới nhất) --> Trước mỗi lần code check xem có cập nhất mới gì không nếu có thì pull code đó về rồi hả code</p>
 <p>Khi add . thì cần 1 terminal thứ 3 và phải đứng ở folder project chính </p>
+
+<ul>
+    <li>Header✅ </li>
+    <li>Login✅ </li>
+    <li>Register✅ </li>
+    <li>Logout✅ </li>
+    <li>Footer❌</li>
+</ul>
