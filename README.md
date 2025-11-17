@@ -36,5 +36,6 @@
     <li>Auto refreshToken❌(in progress by HuyDiep)</li>
     <li>Permission❌</li>
     <li>Cart❌</li>
+    <li>HomePage❌</li>
     <li>...</li>
 </ul>
