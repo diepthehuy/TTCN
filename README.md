@@ -28,13 +28,19 @@
     <li>Login✅ </li>
     <li>Register✅ </li>
     <li>Logout✅ </li>
+    <li>LoginFaceBook❌</li>
+    <li>LoginGoogle❌</li>
+    <li>RegisterFaceBook❌</li>
+    <li>RegisterGoogle❌</li>
+    <li>Admin thêm/xóa/sửa❌</li>
     <li>Footer❌(in progress by HuyNguyen)</li>
     <li>List❌</li>
+    <li>Admin site❌(in progress by HuyDiep)</li>
     <li>Sliders❌</li>
     <li>Ads❌</li>
-    <li>Reset Password❌(in progress by HuyDiep)</li>
+    <li>Reset Password✅</li>
     <li>Auto refreshToken❌(in progress by HuyDiep)</li>
-    <li>Permission❌</li>
+    <li>Permission❌(in progress by HuyDiep)</li>
     <li>Cart❌</li>
     <li>HomePage❌</li>
     <li>...</li>

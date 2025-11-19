@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 //Tạm hoàn thiện
 const Login = ({ setUser, setFullname, setEmail, setPhone }) => {
     const [loggedInUser, setLoggedInUser] = useState("");
-    const [loggedInEmail, setLoggedInEmail] = useState("");
     const [loggedInPassword, setLoggedInPassword] = useState("");
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
@@ -21,13 +20,18 @@ const Login = ({ setUser, setFullname, setEmail, setPhone }) => {
 
     const login = async () => {
         if (validator() === false) return;
-        const userLogin = { "username": loggedInUser.trim(), "password": loggedInPassword }
+        let userLogin={};
+        if(loggedInUser.includes("@gmail.com")){
+            userLogin = { "email": loggedInUser.trim(), "password": loggedInPassword };
+        }else{
+            userLogin = { "username": loggedInUser.trim(), "password": loggedInPassword };
+        } 
         try {
             const reponse = await fetch("http://localhost:3500/auth", {
-                method: 'POST',// gửi bàng POST, muốn biết xài method gửi gì thì xem bên route của server xem endpoint đó nhận gì
-                headers: { 'Content-Type': 'application/json' },//Định dạng nội dung gửi là JSON
-                credentials: 'include',//này vẫn chưa rõ mà chỉ là yêu cầu khi gửi http của bọn Chrome, bọn trình duyệt khác hình như ko yêu cầu
-                body: JSON.stringify(userLogin)//body là nội dung request http bên frontend gửi đến server backend trong đó nội dung là user
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify(userLogin)
             });
             const data = await reponse.json();
             if (reponse.status === 200) {

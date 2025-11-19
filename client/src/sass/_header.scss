@@ -1,96 +1,110 @@
-header{
-    background-color: $main-color;
-    padding: 1.5rem;
-    color: aliceblue;
+header {
+  background-color: $main-color;
+  padding: 1.5rem;
 }
 
-header{
-    display: flex;
-    justify-content: space-around;
+header {
+  display: flex;
+  justify-content: space-around;
 }
 
-header a{
-    @include flexCenter;
-    color: $section-bg;
+header a {
+  @include flexCenter;
+  color: $section-bg;
 }
 
-.search{
-    gap: 0px;
+.search {
+  gap: 0px;
 }
 
-.search input{
-    background-color: $section-bg;
-    border-radius: 8px 0px 0px 8px;
-    border: 1px solid $main-color;
-    width: 300px;
-    padding: 0.6rem;
-    font-size: 1rem;
+.search input {
+  background-color: $section-bg;
+  border-radius: 8px 0px 0px 8px;
+  border: 1px solid $main-color;
+  width: 300px;
+  padding: 0.6rem;
+  font-size: 1rem;
 }
 
-.search >a{
-    background-color: $dark-main-color;
-    width: 2.5rem;
-    border-radius: 0px 5px 5px 0px;
+.search > a {
+  background-color: $dark-main-color;
+  width: 2.5rem;
+  border-radius: 0px 5px 5px 0px;
 }
 
-.search > input:focus, .search > input:hover{
-    border: 1px solid $border-color1;
-    outline: none;
+.search > input:focus,
+.search > input:hover {
+  border: 1px solid $border-color1;
+  outline: none;
 }
 
-.search > a:focus, .search > a:hover{
-    background-color: $light-main-color;
+.search > a:focus,
+.search > a:hover {
+  background-color: $light-main-color;
 }
 
-header >div{
-    display: flex;
-    justify-content: space-between;
-    gap: 0.5rem;
+header > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
-
-header >div>a:first-child{
-    width: 39px;
-    border: 1px solid $section-bg;
-    border-radius: 50%;
+header > div > a:first-child {
+  width: 39px;
+  border: 1px solid $section-bg;
+  border-radius: 50%;
 }
 
-header >a{
-    background-color: transparent;
-    padding: 0.5rem;
-    border: 1px solid $section-bg;
-    border-radius: 5px;
-    color: $section-bg;
-    gap: 0.5rem;
+header > a {
+  background-color: transparent;
+  padding: 0.5rem;
+  border: 1px solid $section-bg;
+  border-radius: 5px;
+  color: $section-bg;
+  gap: 0.5rem;
 }
 
-.dropdown{
-    position: absolute;
-    top: 2rem;
-    right: 0;
-    background-color: $section-bg;
-    color: $main-color;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    min-width: 180px;
-    z-index: 2;
+.dropdown {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  background-color: $section-bg;
+  color: $main-color;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 2;
+  transition: all 0.21s ease;
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: dropdownFade 0.4s ease forwards;
 }
 
-.dropdown a{
-    padding: 0.8rem 1rem;
-    color: $main-color;
-    border-radius: 5px;
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.dropdown a:hover{
-    background-color: $body-bg;
+.dropdown a {
+  padding: 0.8rem 1rem;
+  color: $main-color;
+  border-radius: 5px;
 }
 
+.dropdown a:hover {
+  background-color: $body-bg;
+}
 
-@include mq(789px){
-    header{
+@include mq(789px) {
+  header {
     padding: 2rem;
-    }
+  }
 }

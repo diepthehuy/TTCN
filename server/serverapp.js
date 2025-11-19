@@ -28,7 +28,6 @@ app.use(express.json());
 //middleware for cookie
 app.use(cookieParser());
 
-
 app.use('/register',require('./routes/register'));
 app.use('/auth',require('./routes/auth'));
 app.use('/refresh',require('./routes/refresh'));
