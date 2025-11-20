@@ -1,5 +1,4 @@
 require('dotenv').config();
-const path = require('path');
 const express = require('express');
 const app= express();
 const {logger} = require('./middleware/logEvent');
@@ -36,6 +35,7 @@ app.use('/reset',require('./routes/reset'));
 
 app.use(verifyJWT);
 app.use('/employees',require('./routes/api/employees'));
+app.use('/sanpham',require('./routes/api/sanpham'));
 
 
 app.use(errorHanlder);

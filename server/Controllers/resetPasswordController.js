@@ -8,7 +8,7 @@ const resetPassword = async (req, res) => {
     const user = await User.findOne({
         $or: [{ email: email }, { username: username }]
     }).exec();
-    if (!user) return res.status(409).json({ message: "Email không tồn tại" });
+    if (!user) return res.status(409).json({ message: "Email hoặc tài khoản không tồn tại" });
     try {
         if (!resetCode && !user.resetCode) {
             const code = Math.floor(100000 + Math.random() * 900000);

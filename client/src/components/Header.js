@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FaSearch, FaUser, FaShoppingCart } from 'react-icons/fa'
-const Header = ({ user }) => {
+const Header = ({ user,role }) => {
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
 
   const logout = async () => {
@@ -16,6 +16,7 @@ const Header = ({ user }) => {
         localStorage.removeItem("fullname");
         localStorage.removeItem("email");
         localStorage.removeItem("phone");
+        localStorage.removeItem("role");
         window.location.reload();
       }
     } catch (err) {
@@ -36,7 +37,7 @@ const Header = ({ user }) => {
           <div className='dropdown'>
             <Link style={{ color: "black" }}>Tài khoản</Link>
             <Link style={{ color: "black" }}>Lịch sử đơn hàng</Link>
-            <Link style={{ color: "black" }}>Thông tin cá nhân</Link>
+            <Link style={{ color: "black" }}>Sản phẩm yêu thích</Link>
             <Link style={{ color: "red" }} onClick={() => logout()}>Đăng xuất</Link>
           </div>
           }
@@ -47,7 +48,10 @@ const Header = ({ user }) => {
           <Link to="register">Đăng ký</Link></>
         }
       </div>
-      <Link >
+      {role.Admin && 
+        <Link to="/admin">Admin</Link>
+      }
+      <Link to="/cart">
         <FaShoppingCart />
         <div>Giỏ hàng</div>
       </Link>

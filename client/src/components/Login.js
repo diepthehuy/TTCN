@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
-//Tạm hoàn thiện
-const Login = ({ setUser, setFullname, setEmail, setPhone }) => {
+const Login = ({ setUser, setFullname, setEmail, setPhone,setRole }) => {
     const [loggedInUser, setLoggedInUser] = useState("");
     const [loggedInPassword, setLoggedInPassword] = useState("");
     const [error, setError] = useState(false);
@@ -27,18 +26,19 @@ const Login = ({ setUser, setFullname, setEmail, setPhone }) => {
             userLogin = { "username": loggedInUser.trim(), "password": loggedInPassword };
         } 
         try {
-            const reponse = await fetch("http://localhost:3500/auth", {
+            const response = await fetch("http://localhost:3500/auth", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include',
                 body: JSON.stringify(userLogin)
             });
-            const data = await reponse.json();
-            if (reponse.status === 200) {
+            const data = await response.json();
+            if (response.status === 200) {
                 setUser(data.foundUser.username);
                 setEmail(data.foundUser.email);
                 setFullname(data.foundUser.fullname);
                 setPhone(data.foundUser.phone);
+                setRole(data.foundUser.roles);
                 setErrorMessage("");
                 setError(false);
                 localStorage.setItem("accessToken", data.accessToken);
@@ -46,8 +46,9 @@ const Login = ({ setUser, setFullname, setEmail, setPhone }) => {
                 localStorage.setItem("fullname", data.foundUser.fullname);
                 localStorage.setItem("email", data.foundUser.email);
                 localStorage.setItem("phone", data.foundUser.phone);
+                localStorage.setItem("role", JSON.stringify(data.foundUser.roles));
                 navigate("/");
-            } else if (reponse.status === 401) {
+            } else if (response.status === 401) {
                 setError(true);
                 setErrorMessage(data.message);
             }

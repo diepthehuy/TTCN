@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 
-//tạm hoãn thiện
-const Register = ({ user, setUser, email, setEmail, fullname, setFullname, phone, setPhone }) => {
+
+const Register = ({ user, setUser, email, setEmail, fullname, setFullname, phone, setPhone,setRole }) => {
   const [comfirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -40,15 +40,16 @@ const Register = ({ user, setUser, email, setEmail, fullname, setFullname, phone
         body: JSON.stringify(user)
       });
       const data = await response.json();
-      console.log(data);
       if (response.status === 200) {
         setErrorMessage("");
         setError(false);
+        setRole(data.foundUser.roles);
         localStorage.setItem("accessToken", data.accessToken);
         localStorage.setItem("username", data.foundUser.username);
         localStorage.setItem("fullname", data.foundUser.fullname);
         localStorage.setItem("email", data.foundUser.email);
         localStorage.setItem("phone", data.foundUser.phone);
+        localStorage.setItem("role", data.foundUser.roles);
       } else if (response.status === 401) {
         setError(true);
         setErrorMessage(data.message);

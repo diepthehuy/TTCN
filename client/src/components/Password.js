@@ -71,7 +71,7 @@ const Password = () => {
                     }
                     {!error &&
                         <form onSubmit={(e) => { e.preventDefault(); }}>
-                            <input type="email" placeholder='Email hoặc tên đăng nhập' value={userReset} onChange={(e) => { setUserReset(e.target.value) }} />
+                            <input type="text" placeholder='Email hoặc tên đăng nhập' value={userReset} onChange={(e) => { setUserReset(e.target.value) }} />
                             <input type="password" placeholder='Mật khẩu' value={newPassword} onChange={(e) => { setNewPassword(e.target.value) }} />
                             <input type="password" placeholder='Mật khẩu mới' value={comfirmPassword} onChange={(e) => { setConfirmPassword(e.target.value) }} />
                             <button type='submit' onClick={reset}>Đặt lại mật khẩu</button>
