@@ -1,22 +1,36 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
-const Mashcema = new Schema({
-    MaKhuyenMai:{
-        type:String,
-        required:true
+const MaKhuyenMaiSchema = new Schema({
+    MaKhuyenMai: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true
     },
-    PhanTram:Number,
-    NgayBatDau:{
-        type:Date,
-        default:Date.now(),
-        required :true
+
+    PhanTram: {
+        type: Number,
+        required: true,
+        min: 0,
+        max: 100
     },
-    Ngayketthuc:Date,
-    TrangThai:{
-        type:Boolean,
-        required
+
+    NgayBatDau: {
+        type: Date,
+        default: Date.now,
+        required: true
+    },
+
+    NgayKetThuc: {
+        type: Date,
+        required: true
+    },
+
+    TrangThai: {
+        type: Boolean,
+        default: true
     }
-}, { timestamps: true })
+}, { timestamps: true });
 
-module.exports = mongoose.model('Makm',Mashcema);
+module.exports = mongoose.model('MaKhuyenMai', MaKhuyenMaiSchema);

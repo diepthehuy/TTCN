@@ -1,21 +1,45 @@
 const mongoose = require("mongoose");
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const DonHangSchema = new Schema({
-    NgayGiaoDich:{
-        type:Date,
-        default:Date.now(),
-        required:true
+    KhachHang: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true
     },
-    DiaChiGiaoHang:{
-        type:String,
-        required:true
+    MaKhuyenMai: {
+        type: Schema.Types.ObjectId,
+        ref: "MaKhuyenMai",
+        default: null
     },
-    TongTien:Number,
-    TrangThai:{
-        type:Boolean,
-        required:true
-    }
-})
+    PhuongThucThanhToan: {
+        type: Schema.Types.ObjectId,
+        ref: "PhuongThucThanhToan",
+        required: true
+    },
 
-module.exports = mongoose.model("DonHang",DonHangSchema);
+    NgayGiaoDich: {
+        type: Date,
+        default: Date.now
+    },
+
+    DiaChiGiaoHang: {
+        type: String,
+        required: true,
+        trim: true
+    },
+
+    TongTien: {
+        type: Number,
+        required: true,
+        min: 0
+    },
+
+    TrangThai: {
+        type: String,
+        enum: ["cho_xac_nhan", "dang_giao", "da_giao", "da_huy"],
+        default: "cho_xac_nhan"
+    }
+}, { timestamps: true });
+
+module.exports = mongoose.model("DonHang", DonHangSchema);

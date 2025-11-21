@@ -1,11 +1,174 @@
-footer{
-    background-color: $section-bg;
-    padding: 1.5rem;
-    @include flexCenter;
+footer {
+  background-color: #f8f8f8;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  // --- Payments Section ---
+  .footer__payments {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+
+    img {
+      height: 32px;
+      object-fit: contain;
+    }
+
+    span {
+      font-size: 0.875rem;
+      color: #666;
+      margin-left: 0.5rem;
+    }
+  }
+
+  // --- Main Content Grid ---
+  .footer__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    .footer__column {
+      h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #333;
+        text-transform: none;
+      }
+
+      p {
+        font-size: 0.875rem;
+        color: #666;
+        margin: 0.5rem 0;
+        line-height: 1.6;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #1976d2;
+        }
+
+        a {
+          color: #1976d2;
+          text-decoration: none;
+          font-weight: 600;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    // Brands Column - Column cuối cùng
+    .footer__brands {
+      h3 {
+        margin-bottom: 1rem;
+      }
+
+      .brand-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+
+        img {
+          width: 100%;
+          height: 44px;
+          object-fit: contain;
+          padding: 6px;
+          background: #fff;
+          border-radius: 8px;
+          border: 1px solid #e5e5e5;
+          transition: transform 0.2s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          }
+        }
+      }
+
+      .footer__social {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        img{
+          height: 24px;
+          width: 24px;
+          object-fit: contain;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          background: #fff;
+          padding: 6px 12px;
+          border-radius: 6px;
+          font-size: 0.85rem;
+          color: #555;
+          border: 1px solid #e5e5e5;
+          
+          // Icons (nếu có thể thêm icon bằng ::before)
+          
+        }
+      }
+
+      .footer__certs {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        img {
+          height: 30px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
 }
 
-@include mq(789px){
-    footer{
-    padding: 2rem;
+// --- Responsive Design ---
+@media (min-width: 768px) {
+  footer {
+    padding: 2.5rem 3rem;
+
+    .footer__content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    padding: 3rem 4rem;
+
+    .footer__content {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+
+      .footer__brands {
+        .brand-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  footer {
+    padding: 3rem 6rem;
+  }
 }

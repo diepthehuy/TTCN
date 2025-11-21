@@ -1,19 +1,44 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
-const ChiTietshcema = new Schema({
-    TenSanPham:{
-        type:String,
+const ChiTietDonHangSchema = new Schema({
+    DonHang: {
+        type: Schema.Types.ObjectId,
+        ref: "DonHang",
+        required: true
+    },
+
+    SanPham: {
+        type: Schema.Types.ObjectId,
+        ref: "SanPham",
+        required: true
+    },
+
+    TenSanPham: {
+        type: String,
+        required: true
+    },
+
+    SoLuong: {
+        type: Number,
+        required: true,
+        min: 1,
         required:true
     },
-    SoLuong:{
-        type:Number,
-        required:true
+
+    DonGia: {
+        type: Number,
+        required: true,
+        min: 0,
+        required:0
     },
-    DonGia:{
-        type:Number,
+
+    ThanhTien: {
+        type: Number,
+        required: true,
+        min: 0,
         required:true
     }
-})
+}, { timestamps: true });
 
-module.exports = mongoose.model('ChiTietDonHang',ChiTietshcema);
+module.exports = mongoose.model("ChiTietDonHang", ChiTietDonHangSchema);
