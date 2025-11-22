@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Hangshcema = new Schema({
-    Hang: {
+    TenHang: {
         type: String,
         required: true,
         unique: true,

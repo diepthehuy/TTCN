@@ -8,30 +8,28 @@
     background-color: $section-bg;
     min-height: 500px;
     border-radius: 10px 10px 10px 10px;
-    min-width: 220px;
+    width: 200px;
 }
 
 .Management ul{
     li{
-        padding: 1.75rem;
+        padding: 1.4rem;
+        border-bottom: 1px solid rgb(224, 224, 224);
     }
     a{
-        color: $font-color;
+        color: rgb(89, 89, 89);
         font-weight: 500;
         font-size: 0.95rem;
+    }
+    a:hover{
+        color: $font-color;
     }
 }
 
 .Management>div:last-child{
     background-color: $section-bg;
     min-height: 500px;
-    min-width: 850px;
+    width: 750px;
     border-radius: 10px 10px 10px 10px;
     padding: 2rem;
 }
-
-
-
-
-
-
