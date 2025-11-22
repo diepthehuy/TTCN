@@ -32,16 +32,16 @@
     <li>LoginGoogle❌</li>
     <li>RegisterFaceBook❌</li>
     <li>RegisterGoogle❌</li>
-    <li>Admin thêm/xóa/sửa❌</li>
-    <li>Footer❌(in progress by HuyNguyen)</li>
+    <li>Admin thêm/xóa/sửa❌(in progress by HuyDiep)</li>
+    <li>Footer✅</li>
     <li>List❌</li>
-    <li>Admin site❌(in progress by HuyDiep)</li>
+    <li>Admin site✅</li>
     <li>Sliders❌</li>
     <li>Ads❌</li>
     <li>Reset Password✅</li>
     <li>Auto refreshToken❌(in progress by HuyDiep)</li>
-    <li>Permission❌(in progress by HuyDiep)</li>
-    <li>Cart❌</li>
+    <li>Permission✅</li>
+    <li>Cart❌(in progress by HuyNguyen)</li>
     <li>HomePage❌</li>
     <li>...</li>
 </ul>
